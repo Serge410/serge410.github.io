@@ -2,19 +2,19 @@
 	margin: 0
 	padding: 0
 .wrapper
-	margin: 30px auto
-	.container
-		width: 1140px
-		margin: 0 auto
+	margin: 2rem auto
+	.container		
 		display: grid
 		grid-template-columns: repeat(48, 1fr)
-		grid-auto-rows: minmax(80px, auto)
-		@media screen and ( max-width: 767px )
-			margin: 80px auto
+		grid-auto-rows: minmax(5rem, auto)
+		width: 1140px
+		margin: 0 auto 10rem auto
 		.box
 			&_1
 				grid-column: 3/14
 				grid-row: 1
+				justify-self: start
+				align-self: start
 				@media screen and ( max-width: 767px )
 					display: none
 			&_2
@@ -63,33 +63,32 @@
 				font-size: 2rem
 				color: #f00
 				transition: 0.5s all
+				cursor: pointer
 				&:hover
 					box-shadow: -.3rem 0 .6rem rgba(0,0,0,0.5)
 					border-radius: .6rem
 					padding: .3rem
-					@media screen and ( max-width: 767px )
-						box-shadow: -1.2rem 0 2.4rem rgba(0,0,0,0.5)
-						border-radius: 1.2rem
-						padding: 1rem
 		.title			
 			h1
 				margin: 0
 				font-size: 2rem
 				@media screen and ( max-width: 767px )
 					font-size: 5rem
-					padding-bottom: 80px
+					padding-top: 5rem
+					padding-bottom: 8rem
 				a 
 					text-decoration: none
 					color: #306090
 					transition: 0.5s all
-					@media screen and ( max-width: 767px )
-						box-shadow: -1.2rem 0 2.4rem rgba(0,0,0,0.5)
-						border-radius: 1.2rem
-						padding: 1rem
+					cursor: pointer
 					&:hover
 						box-shadow: -.3rem 0 .6rem rgba(0,0,0,0.5)
 						border-radius: .6rem
-						padding: .3rem						
+						padding: .3rem
+						@media screen and ( max-width: 767px )
+							color: #f00
+							box-shadow: none
+							padding: 0
 		.subtitle			
 			h2 
 				font-size: 1.5rem
@@ -98,11 +97,11 @@
 					font-size: 5rem
 					padding-bottom: 3rem
 		.list
-			margin: 0 0 0 2.05rem
+			margin: 0 0 0 2.06rem
 			@media screen and ( max-width: 767px )
-				margin: 0 0 0 2.5rem
+				margin: 0 0 0 2rem
 			&_item
-				margin: .75rem 0 0 0
+				margin: 1rem 0 0 0
 				color: #306090
 				font-size: 2rem
 				line-height: 2.5rem
@@ -113,14 +112,15 @@
 					text-decoration: none
 					color: #306090
 					transition: 0.5s all
+					cursor: pointer
 					&:hover
 						box-shadow: -.3rem 0 .6rem rgba(0,0,0,0.5)
 						border-radius: .6rem
 						padding: .3rem
 						@media screen and ( max-width: 767px )
-							box-shadow: -1.2rem 0 2.4rem rgba(0,0,0,0.5)
-							border-radius: 1.2rem
-							padding: 1rem
+							color: #f00
+							box-shadow: none
+							padding: 0
 			span 
 				font-size: 1.5rem
 				color: #aaa
@@ -140,7 +140,7 @@
 					border-top-right-radius: 1.8rem
 			&_text
 				padding: .6rem
-				color: #aaa  
+				color: #aaa
 				@media screen and ( max-width: 767px )
 					padding: 2rem
 				h3 
