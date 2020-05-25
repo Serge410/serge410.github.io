@@ -5,18 +5,20 @@
 
 .p_box, .header, .footer {
     color: #000;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-header, footer, .box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8, .box_9, .box_10 {
+header, h1, footer, .box_1, .box_2, .box_3, .box_4, .box_5, .box_6, .box_7, .box_8, .box_9, .box_10 {
     border-radius: 8px;
     padding: 15px;
 }
 
 .wrap {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(1fr, auto));
   grid-gap: .5rem;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(50px, auto);
   padding: 15px;
 }
 
@@ -24,8 +26,8 @@ header {
   background-color: #f20;
   grid-column: 1/6;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+  grid-auto-rows: minmax(0px, auto);
 }
 @media screen and (max-width: 991px) {
   header {
@@ -50,8 +52,9 @@ h1 {
   text-align: center;
   background-color: #fff;
   border: 1px green solid;
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 2;
+  justify-self: center;
+  align-self: center;
 }
 
 .box_1 {
